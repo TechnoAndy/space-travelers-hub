@@ -52,15 +52,6 @@ a {
   background-color: lightsalmon;
 }
 
-.missions {
-  margin: 50px;
-  text-align: left;
-}
-
-.missions-table {
-  border: 1px solid;
-}
-
 tr {
   width: 100%;
 }

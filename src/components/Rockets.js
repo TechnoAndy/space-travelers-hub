@@ -36,8 +36,8 @@ const Rockets = () => {
               <h3 className="rocketName">{rocket.rocket_name}</h3>
               <div className="rocketDesc">
                 <p>
-                  <span className="status">status</span>
-                  <span>{rocket.description}</span>
+                  {rocket.active && <span className="status">Reserved</span>}
+                  {rocket.description}
                 </p>
               </div>
               <button
