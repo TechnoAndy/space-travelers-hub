@@ -82,3 +82,40 @@ td {
 table th {
   padding: 15px;
 }
+
+.description {
+  text-align: justify;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.profile {
+  width: 90%;
+  display: flex;
+  margin: auto;
+  gap: 2em;
+}
+
+.rockets {
+  flex: 1;
+}
+
+.activeRockets {
+  border: 1px solid rgb(197, 197, 197);
+  border-radius: 5px;
+}
+
+.activeRockets > ul {
+  padding-right: 0;
+  margin: 0;
+}
+
+.activeRockets > ul > li {
+  list-style: none;
+  border-bottom: 1px solid rgb(197, 197, 197);
+  padding: 10px 0 15px 10px;
+}
+
+.activeRockets > ul > li:last-child {
+  border-bottom: none;
+}
