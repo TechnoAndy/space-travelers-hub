@@ -20,12 +20,22 @@ ul {
   list-style: none;
 }
 
-a {
+/* a {
   text-decoration: none;
-}
+} */
 
 .NavLinks {
   gap: 1.5rem;
+}
+
+.NavLinks:active {
+  text-decoration: underline;
+}
+
+.NavLinks > li > a {
+  text-decoration: none;
+  padding: 10px;
+  color: #525252;
 }
 
 .container {
@@ -50,6 +60,9 @@ a {
 
 .status {
   background-color: lightsalmon;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 3px;
 }
 
 tr {
