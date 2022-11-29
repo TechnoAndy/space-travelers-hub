@@ -22,10 +22,22 @@ ul {
 
 a {
   text-decoration: none;
+  color: rgb(0, 0, 0);
 }
 
 .NavLinks {
   gap: 1.5rem;
+}
+
+.NavLinks li:nth-of-type(2) {
+  border-right: 2px solid rgb(0, 0, 0);
+  padding-right: 1.5rem;
+}
+
+.active {
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  color: darkcyan;
 }
 
 .container {
