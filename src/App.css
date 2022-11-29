@@ -2,13 +2,13 @@
   width: 100%;
   height: 5rem;
   justify-content: space-between;
-  padding: 4rem;
+  padding: 4.5rem;
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 img {
-  max-width: 100%;
-  width: 75px;
+  max-width: 20%;
+padding-bottom: 1rem;
 }
 
 .flex {
@@ -31,4 +31,54 @@ a {
 .container {
   width: 80%;
   margin: 4rem auto;
+}
+
+.rocketList {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  margin-top: 44px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.rocketCard {
+  display: flex;
+  justify-content: flex-start;
+  gap: 22px;
+}
+
+.status {
+  background-color: blue;
+}
+
+.missions {
+  margin: 50px;
+  text-align: left;
+}
+
+.missions-table {
+  border: 1px solid;
+}
+
+tr {
+  width: 100%;
+}
+
+td {
+  padding: 5px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+table th {
+  padding: 15px;
 }
