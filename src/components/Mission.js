@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMission, missionSpace } from '../redux/missions/missions';
-// import MissionTab from '../redux/missions/MissionTab';
+import './missions.css';
 
 const Mission = () => {
   const dispatch = useDispatch();
@@ -19,7 +19,7 @@ const Mission = () => {
   };
 
   return (
-    <table className="d-mission">
+    <table className="missions-tab" id="tab">
       <thead>
         <tr>
           <th>Mission</th>
@@ -35,8 +35,34 @@ const Mission = () => {
           <tr key={id}>
             <td>{name}</td>
             <td>{description}</td>
-            <td><p>{mission ? 'Active Member' : 'Not A Member'}</p></td>
-            <td><button type="button" onClick={() => { jetclick(id); }}>{mission ? 'cancel missions' : 'Join Mision'}</button></td>
+            <td>
+              {mission ? <p className="non_member active">Active Member</p> : <p className="non_member">Not A Member</p>}
+            </td>
+            <td>
+              {mission
+                ? (
+                  <button
+                    onClick={() => {
+                      jetclick(id);
+                    }}
+                    type="button"
+                    className="join leave"
+                  >
+                    Leave Mission
+                  </button>
+                )
+                : (
+                  <button
+                    onClick={() => {
+                      jetclick(id);
+                    }}
+                    type="button"
+                    className="join"
+                  >
+                    Join Mission
+                  </button>
+                )}
+            </td>
           </tr>
         ))}
       </tbody>

@@ -76,7 +76,7 @@ table {
 table,
 th,
 td {
-  border: 1px solid rgb(66, 65, 65);
+  border: 1px solid #ddd;
 }
 
 table th {
