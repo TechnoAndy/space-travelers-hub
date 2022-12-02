@@ -11,20 +11,22 @@ img {
   padding-bottom: 1rem;
 }
 
+.logo {
+  max-width: 15%;
+}
+
 .flex {
   display: flex;
   align-items: center;
 }
 
-ul {
-  list-style: none;
-}
-
 .NavLinks {
-  gap: 1.5rem;
+  display: flex;
+  list-style-type: none;
+  margin-right: 30px;
 }
 
-.NavLinks:active {
+.NavLinks > li > a {
   text-decoration: underline;
 }
 
@@ -47,44 +49,72 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 44px;
-  margin-top: 44px;
-  margin-left: 5%;
-  margin-right: 5%;
+  padding: 5%;
 }
 
 .rocketCard {
   display: flex;
   justify-content: flex-start;
+  width: 95%;
+  margin: auto;
+  border-radius: 8px;
   gap: 22px;
 }
 
-.status {
-  background-color: lightsalmon;
-  border: 1px solid black;
+.rocketContent {
+  padding: 5%;
+}
+
+.rocketName {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.rocketDesc {
+  font-size: 18px;
+  text-align: justify;
+}
+
+.reserve {
+  background-color: rgb(40, 68, 193);
+  color: #fff;
+  border: none;
+  padding: 5px 16px;
   border-radius: 5px;
-  padding: 3px;
+  cursor: pointer;
+  padding-top: 5px;
 }
 
-tr {
-  width: 100%;
+.cancel {
+  border: solid 1px rgb(128, 128, 128);
+  padding: 5px 16px;
+  border-radius: 5px;
+  color: rgb(128, 128, 128);
+  cursor: pointer;
 }
 
-td {
-  padding: 5px;
+.cancel:hover {
+  background-color: #fff;
 }
 
-table {
-  border-collapse: collapse;
+@media screen and (max-width: 768px) {
+  .rocketCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rocket-img {
+    width: 90%;
+    border-radius: 20px;
+  }
 }
 
-table,
-th,
-td {
-  border: 1px solid #ddd;
-}
-
-table th {
-  padding: 15px;
+.status {
+  background-color: rgb(72, 179, 221);
+  border-radius: 3px;
+  padding: 2px;
+  margin-right: 5px;
 }
 
 .description {
@@ -93,6 +123,7 @@ table th {
   font-size: 15px;
 }
 
+/* My Profile */
 .profile {
   width: 90%;
   display: grid;
@@ -108,10 +139,30 @@ table th {
 }
 
 .activeRockets > ul {
-  padding-right: 0;
+  padding-left: 0;
   margin: 0;
+}
+
+.activeRockets > ul > li {
+  list-style: none;
+  border-bottom: 1px solid rgb(197, 197, 197);
+  padding: 10px 0 15px 10px;
 }
 
 .activeRockets > ul > li:last-child {
   border-bottom: none;
+}
+
+.noReservations {
+  border: 1px solid rgb(197, 197, 197);
+  border-radius: 5px;
+  padding: 5px 0 30px 10px;
+}
+
+.reserveRocketsLink {
+  color: rgb(15, 43, 204);
+  font-size: 15px;
+  padding: 5px;
+  background-color: rgb(66, 66, 66, 0.7);
+  border-radius: 5px;
 }
