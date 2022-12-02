@@ -32,6 +32,18 @@ ul {
   text-decoration: none;
   padding: 10px;
   color: #525252;
+  color: rgb(0, 0, 0);
+}
+
+.NavLinks li:nth-of-type(2) {
+  border-right: 2px solid rgb(0, 0, 0);
+  padding-right: 1.5rem;
+}
+
+.active {
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  color: darkcyan;
 }
 
 .NavLinks li:nth-of-type(2) {
@@ -87,7 +99,7 @@ table {
 table,
 th,
 td {
-  border: 1px solid black;
+  border: 1px solid #ddd;
 }
 
 table th {
