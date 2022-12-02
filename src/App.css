@@ -30,6 +30,12 @@ img {
   text-decoration: underline;
 }
 
+.activeRockets > ul > li {
+  list-style: none;
+  border-bottom: 1px solid rgb(197, 197, 197);
+  padding: 10px 0 15px 10px;
+}
+
 .NavLinks li:nth-of-type(2) {
   border-right: 2px solid rgb(0, 0, 0);
   padding-right: 1.5rem;
@@ -141,12 +147,6 @@ img {
 .activeRockets > ul {
   padding-left: 0;
   margin: 0;
-}
-
-.activeRockets > ul > li {
-  list-style: none;
-  border-bottom: 1px solid rgb(197, 197, 197);
-  padding: 10px 0 15px 10px;
 }
 
 .activeRockets > ul > li:last-child {
