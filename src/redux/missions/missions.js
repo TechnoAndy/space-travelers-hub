@@ -1,62 +1,60 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
 
 const url = 'https://api.spacexdata.com/v3/missions';
-const FETCH_MISSIONS = 'FETCH_MISSIONS';
 
-const initialState = {
-  missions: [],
-  status: null,
+const getMission = async () => {
+  const resolve = await fetch(url);
+  const mission = await resolve.json();
+  return mission;
 };
 
-export const fetchMissions = createAsyncThunk(
-  FETCH_MISSIONS,
-  async (thunkAPI) => {
-    try {
-      const missions = await axios.get(url);
-      return missions.data;
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data);
-    }
-  },
-);
+export const fetchMission = createAsyncThunk('missions/fetchMission', getMission);
 
-const slicer = createSlice({
+const MissionSlice = createSlice({
   name: 'missions',
-  initialState,
+  initialState: {
+    missions: [],
+    status: 'mission_display',
+    loading: false,
+  },
   reducers: {
-    joinMission: (state, action) => ({
-      ...state,
-      missions: state.missions.map((mission) => {
-        if (mission.id === action.payload) {
-          return {
-            ...mission,
-            active: !mission.active,
-          };
+    missionSpace: (state, action) => {
+      const myState = state;
+      const newState = myState.missions.map((jet1) => {
+        if (jet1.id !== action.payload) {
+          return jet1;
         }
-        return { ...mission };
-      }),
-    }),
+        return {
+          ...jet1, mission: !jet1.mission,
+        };
+      });
+      myState.missions = newState;
+    },
   },
 
-  extraReducers(builder) {
-    builder
-      .addCase(fetchMissions.pending, (state) => {
-        const IsPending = state;
-        IsPending.status = 'pending';
-      })
-      .addCase(fetchMissions.fulfilled, (state, action) => {
-        const IsSucessful = state;
-        IsSucessful.status = 'success';
-        IsSucessful.missions = action.payload;
-      })
-
-      .addCase(fetchMissions.rejected, (state) => {
-        const IsRejected = state;
-        IsRejected.status = 'rejected';
-      });
+  extraReducers: {
+    [fetchMission.pending]: (state) => {
+      const IsPending = state;
+      IsPending.pending = true;
+    },
+    [fetchMission.fulfilled]: (state, action) => {
+      const joinMission = state;
+      joinMission.loading = false;
+      const missionData = [];
+      action.payload.map((mission) => missionData.push({
+        id: mission.mission_id,
+        name: mission.mission_name,
+        description: mission.description,
+        mission: false,
+      }));
+      joinMission.missions = missionData;
+    },
+    [fetchMission.rejected]: (state) => {
+      const IsRejected = state;
+      IsRejected.loading = false;
+    },
   },
 });
 
-export const { bookMission } = slicer.actions;
-export default slicer.reducer;
+export default MissionSlice.reducer;
+export const { missionSpace } = MissionSlice.actions;
