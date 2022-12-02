@@ -121,12 +121,6 @@ table th {
   margin: 0;
 }
 
-.activeRockets > ul > li {
-  list-style: none;
-  border-bottom: 1px solid rgb(197, 197, 197);
-  padding: 10px 0 15px 10px;
-}
-
 .activeRockets > ul > li:last-child {
   border-bottom: none;
 }
