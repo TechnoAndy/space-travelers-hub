@@ -1,7 +1,7 @@
 import React from 'react';
-
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import MissionProfiler from './MissionProfiler';
 
 const Profile = () => {
   const { rockets } = useSelector((state) => state.rockets);
@@ -10,7 +10,7 @@ const Profile = () => {
   return (
     <div className="profile">
       <div className="rockets">
-        <h3>My Rockets</h3>
+        <h1 className="head-text">My Rockets</h1>
         {reservedRockets.length === 0 ? (
           <div className="noReservations">
             <p>No Reservations Made</p>
@@ -26,6 +26,7 @@ const Profile = () => {
           </div>
         )}
       </div>
+      <MissionProfiler />
     </div>
   );
 };

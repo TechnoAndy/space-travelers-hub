@@ -7,7 +7,7 @@
 }
 
 img {
-  max-width: 20%;
+  max-width: 10%;
   padding-bottom: 1rem;
 }
 
@@ -36,7 +36,6 @@ ul {
 .active {
   padding-bottom: 0.35rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-  color: darkcyan;
 }
 
 .container {
@@ -96,13 +95,11 @@ table th {
 
 .profile {
   width: 90%;
-  display: flex;
-  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  margin: 3rem auto;
   gap: 2em;
-}
-
-.rockets {
-  flex: 1;
 }
 
 .activeRockets {
