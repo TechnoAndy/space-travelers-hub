@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
@@ -28,5 +29,14 @@ const Profile = () => {
     </div>
   );
 };
+
+import MyProfile from './MissionProfiler';
+
+const Profile = () => (
+  <div className="container">
+    <MyProfile />
+  </div>
+);
+
 
 export default Profile;
