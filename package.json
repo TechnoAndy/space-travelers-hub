@@ -18,6 +18,11 @@
     "redux-thunk": "^2.4.2",
     "web-vitals": "^2.1.4"
   },
+  "jest": {
+    "moduleNameMapper": {
+      "axios": "axios/dist/node/axios.cjs"
+    }
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -55,6 +60,7 @@
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
     "jest": "^27.5.1",
+    "react-test-renderer": "^18.2.0",
     "redux-devtools-extension": "^2.13.9",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",

@@ -1,18 +1,13 @@
-import { render } from '@testing-library/react';
-import { Provider } from 'react-redux';
-// import Mission from '../components/Mission';
-import store from '../redux/configureStore';
+import fetchMission from './__mock__/MissionSlice';
 
-jest.setTimeout(10000);
-describe('Missions', () => {
-  it('Expected to match the snapshot', () => {
-    const Mission = render(
-      <>
-        <Provider store={store}>
-          <Mission />
-        </Provider>
-      </>,
-    );
-    expect(Mission).toMatchSnapshot();
+describe('Mission must pass the test', () => {
+  test('Fetch mission must return data', () => {
+    expect(fetchMission()).toBeDefined();
+  });
+  test('Fetch mission return value length must be', () => {
+    expect(fetchMission()).toHaveLength(4);
+  });
+  test('Fetch mission return name to be', () => {
+    expect(fetchMission()[1].name).toBe('Dodge KillerX');
   });
 });
