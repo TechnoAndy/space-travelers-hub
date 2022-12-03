@@ -8,7 +8,6 @@
 
 img {
   max-width: 30%;
-  height: auto;
   padding-bottom: 1rem;
 }
 
@@ -29,8 +28,27 @@ img {
 
 .NavLinks > li > a {
   text-decoration: underline;
-  padding: 10px;
-  color: #525252;
+}
+
+.activeRockets > ul > li {
+  list-style: none;
+  border-bottom: 1px solid rgb(197, 197, 197);
+  padding: 10px 0 15px 10px;
+}
+
+.NavLinks li:nth-of-type(2) {
+  border-right: 2px solid rgb(0, 0, 0);
+  padding-right: 1.5rem;
+}
+
+.active {
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  width: 80%;
+  margin: 4rem auto;
 }
 
 .container {
@@ -131,7 +149,6 @@ h1 {
 
 .activeRockets :nth-child(even) {
   background-color: #f2f2f2;
-/*   width: 10%; */
 }
 
 .activeRockets > ul > li {
