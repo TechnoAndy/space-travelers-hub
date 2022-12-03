@@ -5,12 +5,14 @@ import './missions.css';
 
 const Mission = () => {
   const dispatch = useDispatch();
-  const { missions, loading } = useSelector((state) => state.missions);
+  const { missions, status } = useSelector((state) => state.missions);
   useEffect(() => {
-    dispatch(fetchMission());
-  }, [loading, dispatch]);
+    if (status === null) {
+      dispatch(fetchMission());
+    }
+  }, [status, dispatch]);
 
-  if (loading) {
+  if (status === 'pending') {
     return <h1> Loading...</h1>;
   }
 
