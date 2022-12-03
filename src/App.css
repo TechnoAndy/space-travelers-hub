@@ -28,22 +28,23 @@ img {
 
 .NavLinks > li > a {
   text-decoration: underline;
+  padding: 10px;
+  color: #525252;
 }
 
-.activeRockets > ul > li {
+/* .activeRockets > ul > li {
   list-style: none;
-  border-bottom: 1px solid rgb(197, 197, 197);
   padding: 10px 0 15px 10px;
-}
+} */
 
-.NavLinks li:nth-of-type(2) {
+/* .NavLinks li:nth-of-type(2) {
   border-right: 2px solid rgb(0, 0, 0);
-  padding-right: 1.5rem;
-}
+  padding-right: rem;
+} */
 
 .active {
   padding-bottom: 0.35rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+/*   border-bottom: 1px solid rgba(0, 0, 0, 0.3); */
 }
 
 .container {
@@ -129,8 +130,7 @@ img {
   font-size: 15px;
 }
 
-/* My Profile */
-.profile {
+profile {
   width: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -139,30 +139,27 @@ img {
   gap: 2em;
 }
 
-.activeRockets {
-  border: 1px solid rgb(197, 197, 197);
-  border-radius: 5px;
+h1 {
+  margin-bottom: 1rem;
 }
 
-.activeRockets > ul {
-  padding-left: 0;
-  margin: 0;
+.activeRockets :nth-child(even) {
+  background-color: #f2f2f2;
 }
 
-.activeRockets > ul > li:last-child {
-  border-bottom: none;
+.activeRockets > ul > li {
+  list-style: none;
+  font-size: 21px;
+  padding: 3px;
+  padding-left: 35px;
 }
 
-.noReservations {
-  border: 1px solid rgb(197, 197, 197);
-  border-radius: 5px;
-  padding: 5px 0 30px 10px;
+.rockets td {
+  width: 74.3%;
+  padding-left: 2rem;
+  font-size: 1.5rem;
 }
 
 .reserveRocketsLink {
-  color: rgb(15, 43, 204);
-  font-size: 15px;
-  padding: 5px;
-  background-color: rgb(66, 66, 66, 0.7);
-  border-radius: 5px;
+  font-size: 1.5rem;
 }

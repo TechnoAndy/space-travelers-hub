@@ -65,14 +65,10 @@ thead {
 }
 
 td.tour-now {
-  width: 100%;
-}
-
-.head-text {
-  margin-bottom: 1rem;
+  width: 80%;
 }
 
 tbody.tour_body td {
-  padding: 1.5rem;
+  padding-left: 2rem;
   font-size: 1.5rem;
 }
