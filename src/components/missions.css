@@ -2,29 +2,29 @@ tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-td:nth-child(1) {
+#tab tbody td:nth-child(1) {
   width: 10%;
+  padding: 8px;
 }
 
-td:nth-child(2) {
+#tab td:nth-child(2) {
   width: 60%;
   padding: 20px;
 }
 
-td:nth-child(3),
-td:nth-child(4) {
+#tab td:nth-child(3),
+#tab td:nth-child(4) {
   text-align: center;
   width: 15%;
-}
-
-table.missions-tab > td,
-table.missions-tab > th {
-  border: 1px dashed #ddd;
 }
 
 #tab {
   width: 95%;
   margin: 60px auto;
+}
+
+table.tour_list {
+  width: 100%;
 }
 
 thead {
@@ -57,11 +57,11 @@ thead {
   border: transparent;
 }
 
-.active {
+.non_member.active {
   color: #fff;
   padding: 0.2rem;
   border-radius: 4px;
-  border: transparent;
+  background-color: rgb(63, 115, 194);
 }
 
 td.tour-now {
@@ -69,6 +69,6 @@ td.tour-now {
 }
 
 tbody.tour_body td {
-  padding-left: 2rem;
+  padding: 15px;
   font-size: 1.5rem;
 }

@@ -28,3 +28,8 @@ body {
 a {
   text-decoration: none;
 }
+
+a.active {
+  display: inline-block;
+  text-decoration: underline;
+}

@@ -11,8 +11,8 @@ img {
   padding-bottom: 1rem;
 }
 
-.logo {
-  max-width: 15%;
+img.logo {
+  max-width: 13%;
 }
 
 .flex {
@@ -27,9 +27,18 @@ img {
 }
 
 .NavLinks > li > a {
-  text-decoration: underline;
   padding: 10px;
   color: #525252;
+}
+
+.activeRockets > ul > li {
+  list-style: none;
+  padding: 16px;
+  font-size: 1.5rem;
+}
+
+.NavLinks li:nth-child(2) {
+  border-right: 2px solid #525252;
 }
 
 .active {
@@ -37,7 +46,10 @@ img {
 }
 
 .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   width: 80%;
+  gap: 1rem;
   margin: 4rem auto;
 }
 
@@ -125,13 +137,6 @@ h1 {
 
 .activeRockets :nth-child(even) {
   background-color: #f2f2f2;
-}
-
-.activeRockets > ul > li {
-  list-style: none;
-  font-size: 21px;
-  padding: 3px;
-  padding-left: 35px;
 }
 
 .rockets td {
