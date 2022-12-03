@@ -20,12 +20,12 @@ const MissionSlice = createSlice({
   reducers: {
     missionSpace: (state, action) => {
       const myState = state;
-      const newState = myState.missions.map((going) => {
-        if (going.id !== action.payload) {
-          return going;
+      const newState = myState.missions.map((jet1) => {
+        if (jet1.id !== action.payload) {
+          return jet1;
         }
         return {
-          ...going, mission: !going.missions,
+          ...jet1, mission: !jet1.mission,
         };
       });
       myState.missions = newState;
