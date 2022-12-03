@@ -2,9 +2,15 @@ tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-#tab tbody td:nth-child(1) {
-  width: 10%;
-  padding: 8px;
+tbody.tour_body td {
+  padding: 15px;
+  font-size: 1.5rem;
+}
+
+#tab td:nth-child(3),
+#tab td:nth-child(4) {
+  text-align: center;
+  width: 15%;
 }
 
 #tab td:nth-child(2) {
@@ -12,10 +18,9 @@ tr:nth-child(even) {
   padding: 20px;
 }
 
-#tab td:nth-child(3),
-#tab td:nth-child(4) {
-  text-align: center;
-  width: 15%;
+#tab tbody td:nth-child(1) {
+  width: 10%;
+  padding: 8px;
 }
 
 #tab {
@@ -66,9 +71,4 @@ thead {
 
 td.tour-now {
   width: 80%;
-}
-
-tbody.tour_body td {
-  padding: 15px;
-  font-size: 1.5rem;
 }
