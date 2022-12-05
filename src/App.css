@@ -53,14 +53,14 @@ img.logo {
   margin: 4rem auto;
 }
 
-.rocketList {
+.rocket-data {
   display: flex;
   flex-direction: column;
   gap: 44px;
   padding: 5%;
 }
 
-.rocketCard {
+.rocket-Card {
   display: flex;
   justify-content: flex-start;
   width: 95%;
@@ -69,36 +69,37 @@ img.logo {
   gap: 22px;
 }
 
-.rocketContent {
+.rocket-Content {
   padding: 5%;
 }
 
-.rocketName {
+.rocket-Name {
   font-size: 30px;
   font-weight: bold;
 }
 
-.rocketDesc {
+.rocket-Description {
   font-size: 18px;
   text-align: justify;
 }
 
 .reserve {
-  background-color: rgb(40, 68, 193);
-  color: #fff;
-  border: none;
+  cursor: pointer;
   padding: 5px 16px;
   border-radius: 5px;
-  cursor: pointer;
-  padding-top: 5px;
+  background-color: rgb(40, 68, 193);
+  color: #fff;
+  border: rgb(40, 68, 193);
+  margin-top: 5px;
 }
 
 .cancel {
   border: solid 1px rgb(128, 128, 128);
-  padding: 5px 16px;
-  border-radius: 5px;
   color: rgb(128, 128, 128);
   cursor: pointer;
+  padding: 5px 16px;
+  border-radius: 5px;
+  margin-top: 5px;
 }
 
 .cancel:hover {
@@ -106,7 +107,7 @@ img.logo {
 }
 
 @media screen and (max-width: 768px) {
-  .rocketCard {
+  .rocket-Card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -121,8 +122,8 @@ img.logo {
 .status {
   background-color: rgb(72, 179, 221);
   border-radius: 3px;
-  padding: 2px;
-  margin-right: 5px;
+  padding: 4px;
+  margin:  10px 10px ;
 }
 
 .description {
@@ -135,7 +136,7 @@ h1 {
   margin-bottom: 1rem;
 }
 
-.activeRockets :nth-child(even) {
+.active-Rockets :nth-child(even) {
   background-color: #f2f2f2;
 }
 
@@ -145,6 +146,6 @@ h1 {
   font-size: 1.5rem;
 }
 
-.reserveRocketsLink {
+.reserve-Link {
   font-size: 1.5rem;
 }

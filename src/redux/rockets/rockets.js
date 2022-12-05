@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const Apiurl = 'https://api.spacexdata.com/v3/rockets';
+const apiUrl = 'https://api.spacexdata.com/v3/rockets';
 const FETCH_ROCKETS = 'FETCH_ROCKETS';
 
 const initialState = {
@@ -13,7 +13,7 @@ export const fetchRockets = createAsyncThunk(
   FETCH_ROCKETS,
   async (thunkAPI) => {
     try {
-      const rockets = await axios.get(Apiurl);
+      const rockets = await axios.get(apiUrl);
       return rockets.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data);
@@ -25,7 +25,7 @@ const slice = createSlice({
   name: 'rockets',
   initialState,
   reducers: {
-    bookRockets: (state, action) => ({
+    booksRockets: (state, action) => ({
       ...state,
       rockets: state.rockets.map((rocket) => {
         if (rocket.id === action.payload) {
@@ -42,20 +42,20 @@ const slice = createSlice({
   extraReducers(builder) {
     builder
       .addCase(fetchRockets.pending, (state) => {
-        const IsPending = state;
-        IsPending.status = 'pending';
+        const IsLoading = state;
+        IsLoading.status = 'pending';
       })
       .addCase(fetchRockets.fulfilled, (state, action) => {
-        const IsSucessful = state;
-        IsSucessful.status = 'success';
-        IsSucessful.rockets = action.payload;
+        const IsWorking = state;
+        IsWorking.status = 'success';
+        IsWorking.rockets = action.payload;
       })
       .addCase(fetchRockets.rejected, (state) => {
-        const IsRejected = state;
-        IsRejected.status = 'rejected';
+        const IsNotWorking = state;
+        IsNotWorking.status = 'rejected';
       });
   },
 });
 
-export const { bookRockets } = slice.actions;
+export const { booksRockets } = slice.actions;
 export default slice.reducer;
